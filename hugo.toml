@@ -25,6 +25,8 @@ unsafe = false
 [params]
 env = "production"
 
+mainSections = []
+
 defaultTheme = "light"
 disableThemeToggle = true
 disableScrollToTop = true
