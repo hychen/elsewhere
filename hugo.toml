@@ -1,3 +1,106 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://hychen.github.io/elsewhere/"
+languageCode = "zh-tw"
+title = "elsewhere"
+
+theme = "PaperMod"
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[pagination]
+pagerSize = 20
+
+# ---- 基本輸出控制 ----
+disableKinds = ["RSS", "taxonomy", "term"]
+
+# ---- Markdown 行為 ----
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = false
+
+# ---- PaperMod 主要參數 ----
+[params]
+env = "production"
+
+defaultTheme = "light"
+disableThemeToggle = true
+disableScrollToTop = true
+
+showReadingTime = false
+showPostNavLinks = false
+showBreadCrumbs = false
+showCodeCopyButtons = false
+showShareButtons = false
+showWordCount = false
+showToc = false
+comments = false
+
+disableSpecial1stPost = true
+hideFooter = true
+
+# 不顯示作者、不建立人格輸出中心
+author = ""
+
+# ---- 首頁行為（關鍵）----
+
+# ---- 搜尋（關掉，避免被當內容庫）----
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = false
+threshold = 0.4
+location = 0
+distance = 100
+minMatchCharLength = 0
+keys = []
+
+# ---- 社群連結（不要放）----
+[[params.socialIcons]]
+# 故意留空
+
+# ---- 選單（只放 section，不放 post）----
+[menu]
+
+[[menu.main]]
+identifier = "life"
+name = "life"
+url = "/life/"
+weight = 10
+
+[[menu.main]]
+identifier = "travel"
+name = "travel"
+url = "/travel/"
+weight = 20
+
+[[menu.main]]
+identifier = "interests"
+name = "interests"
+url = "/interests/"
+weight = 30
+
+[[menu.main]]
+identifier = "notes"
+name = "notes"
+url = "/notes/"
+weight = 40
+
+[[menu.main]]
+identifier = "values"
+name = "values"
+url = "/values/"
+weight = 50
+
+[[menu.main]]
+identifier = "edges"
+name = "edges"
+url = "/edges/"
+weight = 60
+
+[[menu.main]]
+identifier = "contact"
+name = "contact"
+url = "/contact/"
+weight = 70
